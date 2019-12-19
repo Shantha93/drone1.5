@@ -9,7 +9,7 @@ os.arch              : amd64
 os.version           : 4.15.0-20-generic
 file.encoding        : UTF-8
 ========================
-Run Started on Thu Dec 19 09:43:25 UTC 2019
+Run Started on Thu Dec 19 09:43:59 UTC 2019
 Loading Browser Profile
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/drone/src/lib/slf4j-simple-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
@@ -31,77 +31,33 @@ Inside Task Run
 Running Iteration 1
 Launching Chrome
 Launching Remote Driver
-2019-12-19 09:43:25:12S +0000 [INFO] org.openqa.selenium.remote.DesiredCapabilities chrome:Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-2019-12-19 09:43:27:12S +0000 [INFO] org.openqa.selenium.remote.ProtocolHandshake createSession:Detected dialect: W3C
+2019-12-19 09:43:59:12S +0000 [INFO] org.openqa.selenium.remote.DesiredCapabilities chrome:Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+2019-12-19 09:44:00:12S +0000 [INFO] org.openqa.selenium.remote.ProtocolHandshake createSession:Detected dialect: W3C
 Chrome Launched
-Step:1   | Object: Browser | Action: Open | Input: URL_Global:URL | Conditon:  | @19-Dec-2019 09:43:27.027
+Step:1   | Object: Browser | Action: Open | Input: URL_Global:URL | Conditon:  | @19-Dec-2019 09:44:00.000
 [DONE]   | Opened Url: http://toolsqa.com/automation-practice-form/
 
 ===================================================================================================
 
-Step:2   | Object: firstname | Action: Click | Input:  | Conditon:  | @19-Dec-2019 09:43:29.029
-Using @name [firstname], Object 'firstname' Found in 46 ms
+Step:2   | Object: firstname | Action: Click | Input:  | Conditon:  | @19-Dec-2019 09:44:03.003
+Using @name [firstname], Object 'firstname' Found in 30 ms
 [DONE]   | Clicking on firstname
 
 ===================================================================================================
 
-Step:3   | Object: firstname | Action: Set | Input: @Cognizant | Conditon:  | @19-Dec-2019 09:43:31.031
+Step:3   | Object: firstname | Action: Set | Input: @Cognizant | Conditon:  | @19-Dec-2019 09:44:03.003
 Using @name [firstname], Object 'firstname' Found in 18 ms
 [DONE]   | Entered Text 'Cognizant' on 'firstname'
 
 ===================================================================================================
 
-Step:4   | Object: lastname | Action: Click | Input:  | Conditon:  | @19-Dec-2019 09:43:31.031
-Using @type [input], Object 'lastname' Found in 173 ms
+Step:4   | Object: lastname | Action: Click | Input:  | Conditon:  | @19-Dec-2019 09:44:04.004
+Using @type [input], Object 'lastname' Found in 113 ms
 [FAIL]   | Seems Like the Element [lastname] is Not Visible or hidden at the moment
 
 ===================================================================================================
 
-2019-12-19 09:43:33:12S +0000 [SEVERE] com.cognizant.cognizantits.engine.reporting.util.ReportUtils takeScreenshot:null
-java.lang.RuntimeException: Error making screenshot
-	at com.cognizant.cognizantits.engine.drivers.SeleniumDriver.createNewScreenshot(SeleniumDriver.java:186)
-	at com.cognizant.cognizantits.engine.drivers.SeleniumDriver.createScreenShot(SeleniumDriver.java:164)
-	at com.cognizant.cognizantits.engine.reporting.util.ReportUtils.takeScreenshot(ReportUtils.java:86)
-	at com.cognizant.cognizantits.engine.reporting.impl.html.HtmlTestCaseHandler.takeSSAndPutDetail(HtmlTestCaseHandler.java:288)
-	at com.cognizant.cognizantits.engine.reporting.impl.html.HtmlTestCaseHandler.takeScreenShot(HtmlTestCaseHandler.java:249)
-	at com.cognizant.cognizantits.engine.reporting.impl.html.HtmlTestCaseHandler.putStatus(HtmlTestCaseHandler.java:226)
-	at com.cognizant.cognizantits.engine.reporting.impl.html.HtmlTestCaseHandler.updateTestLog(HtmlTestCaseHandler.java:115)
-	at com.cognizant.cognizantits.engine.reporting.TestCaseReport.updateTestLog(TestCaseReport.java:134)
-	at com.cognizant.cognizantits.engine.reporting.TestCaseReport.updateTestLog(TestCaseReport.java:105)
-	at com.cognizant.cognizantits.engine.execution.run.TestCaseRunner.lambda$reportOnError$0(TestCaseRunner.java:327)
-	at java.base/java.util.Optional.ifPresent(Optional.java:183)
-	at com.cognizant.cognizantits.engine.execution.run.TestCaseRunner.reportOnError(TestCaseRunner.java:326)
-	at com.cognizant.cognizantits.engine.execution.run.TestCaseRunner.onRuntimeException(TestCaseRunner.java:290)
-	at com.cognizant.cognizantits.engine.execution.run.TestCaseRunner.run(TestCaseRunner.java:365)
-	at com.cognizant.cognizantits.engine.core.Task.runIteration(Task.java:130)
-	at com.cognizant.cognizantits.engine.core.Task.run(Task.java:85)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: org.openqa.selenium.WebDriverException: unknown error: cannot activate web view
-  (Session info: chrome=78.0.3904.70)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'fe5954dc2992', ip: '172.25.0.4', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-20-generic', java.version: '11.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.70, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: /tmp/.com.google.Chrome.9cBknF}, goog:chromeOptions: {debuggerAddress: localhost:43135}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 422c8676dafc1d4761399da6971...}
-Session ID: 422c8676dafc1d4761399da69714e378
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
-	at com.galenframework.utils.GalenUtils.makeFullScreenshot(GalenUtils.java:149)
-	at com.cognizant.cognizantits.engine.drivers.SeleniumDriver.getScreenShotFromGalen(SeleniumDriver.java:197)
-	at com.cognizant.cognizantits.engine.drivers.SeleniumDriver.createNewScreenshot(SeleniumDriver.java:183)
-	... 18 more
-
-2019-12-19 09:43:33:12S +0000 [SEVERE] com.cognizant.cognizantits.engine.execution.run.TestCaseRunner onRuntimeException:Seems Like the Element [lastname] is Not Visible or hidden at the moment
+2019-12-19 09:44:11:12S +0000 [SEVERE] com.cognizant.cognizantits.engine.execution.run.TestCaseRunner onRuntimeException:Seems Like the Element [lastname] is Not Visible or hidden at the moment
 com.cognizant.cognizantits.engine.execution.exception.element.ElementException: Seems Like the Element [lastname] is Not Visible or hidden at the moment
 	at com.cognizant.cognizantits.engine.commands.General.elementEnabled(General.java:64)
 	at com.cognizant.cognizantits.engine.commands.Basic.Click(Basic.java:47)
@@ -118,13 +74,13 @@ com.cognizant.cognizantits.engine.execution.exception.element.ElementException: 
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 
-Step:5   | Object: lastname | Action: Set | Input: @Intelligent Test Scripter | Conditon:  | @19-Dec-2019 09:43:33.033
-Using @type [input], Object 'lastname' Found in 117 ms
+Step:5   | Object: lastname | Action: Set | Input: @Intelligent Test Scripter | Conditon:  | @19-Dec-2019 09:44:11.011
+Using @type [input], Object 'lastname' Found in 118 ms
 [FAIL]   | Seems Like the Element [lastname] is Not Visible or hidden at the moment
 
 ===================================================================================================
 
-2019-12-19 09:43:34:12S +0000 [SEVERE] com.cognizant.cognizantits.engine.reporting.util.ReportUtils takeScreenshot:null
+2019-12-19 09:44:13:12S +0000 [SEVERE] com.cognizant.cognizantits.engine.reporting.util.ReportUtils takeScreenshot:null
 java.lang.RuntimeException: Error making screenshot
 	at com.cognizant.cognizantits.engine.drivers.SeleniumDriver.createNewScreenshot(SeleniumDriver.java:186)
 	at com.cognizant.cognizantits.engine.drivers.SeleniumDriver.createScreenShot(SeleniumDriver.java:164)
@@ -146,13 +102,14 @@ java.lang.RuntimeException: Error making screenshot
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 Caused by: org.openqa.selenium.WebDriverException: unknown error: session deleted because of page crash
+from unknown error: cannot determine loading status
 from tab crashed
   (Session info: chrome=78.0.3904.70)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'fe5954dc2992', ip: '172.25.0.4', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-20-generic', java.version: '11.0.2'
+System info: host: '562ec1da68c4', ip: '192.168.240.4', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-20-generic', java.version: '11.0.2'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.70, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: /tmp/.com.google.Chrome.9cBknF}, goog:chromeOptions: {debuggerAddress: localhost:43135}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 422c8676dafc1d4761399da6971...}
-Session ID: 422c8676dafc1d4761399da69714e378
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.70, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: /tmp/.com.google.Chrome.lgB0FS}, goog:chromeOptions: {debuggerAddress: localhost:44575}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 7d22dbd73666bf336d4198281d2...}
+Session ID: 7d22dbd73666bf336d4198281d21245f
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -162,16 +119,14 @@ Session ID: 422c8676dafc1d4761399da69714e378
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
-	at com.galenframework.utils.GalenUtils.obtainVerticalScrollPosition(GalenUtils.java:248)
-	at com.galenframework.utils.GalenUtils.waitUntilItIsScrolledToPosition(GalenUtils.java:243)
-	at com.galenframework.utils.GalenUtils.scrollVerticallyTo(GalenUtils.java:227)
-	at com.galenframework.utils.GalenUtils.makeFullScreenshot(GalenUtils.java:112)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at com.galenframework.utils.GalenUtils.makeFullScreenshot(GalenUtils.java:149)
 	at com.cognizant.cognizantits.engine.drivers.SeleniumDriver.getScreenShotFromGalen(SeleniumDriver.java:197)
 	at com.cognizant.cognizantits.engine.drivers.SeleniumDriver.createNewScreenshot(SeleniumDriver.java:183)
 	... 18 more
 
-2019-12-19 09:43:34:12S +0000 [SEVERE] com.cognizant.cognizantits.engine.execution.run.TestCaseRunner onRuntimeException:Seems Like the Element [lastname] is Not Visible or hidden at the moment
+2019-12-19 09:44:13:12S +0000 [SEVERE] com.cognizant.cognizantits.engine.execution.run.TestCaseRunner onRuntimeException:Seems Like the Element [lastname] is Not Visible or hidden at the moment
 com.cognizant.cognizantits.engine.execution.exception.element.ElementException: Seems Like the Element [lastname] is Not Visible or hidden at the moment
 	at com.cognizant.cognizantits.engine.commands.General.elementEnabled(General.java:64)
 	at com.cognizant.cognizantits.engine.commands.Basic.Set(Basic.java:99)
@@ -188,8 +143,8 @@ com.cognizant.cognizantits.engine.execution.exception.element.ElementException: 
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 
-Step:6   | Object: Sex | Action: Click | Input:  | Conditon:  | @19-Dec-2019 09:43:34.034
-2019-12-19 09:43:34:12S +0000 [SEVERE] com.cognizant.cognizantits.engine.core.Task runIteration:Driver Chrome Closed / Could not be reached
+Step:6   | Object: Sex | Action: Click | Input:  | Conditon:  | @19-Dec-2019 09:44:13.013
+2019-12-19 09:44:13:12S +0000 [SEVERE] com.cognizant.cognizantits.engine.core.Task runIteration:Driver Chrome Closed / Could not be reached
 com.cognizant.cognizantits.engine.execution.exception.DriverClosedException: Driver Chrome Closed / Could not be reached
 	at com.cognizant.cognizantits.engine.drivers.SeleniumDriver.isAlive(SeleniumDriver.java:148)
 	at com.cognizant.cognizantits.engine.core.CommandControl.canIFindElement(CommandControl.java:103)
@@ -210,13 +165,13 @@ com.cognizant.cognizantits.engine.execution.exception.DriverClosedException: Dri
 
 ===================================================================================================
 
-2019-12-19 09:43:34:12S +0000 [OFF ] com.cognizant.cognizantits.engine.drivers.SeleniumDriver closeBrowser:Couldn't Kill the Driver
-org.openqa.selenium.WebDriverException: Session [422c8676dafc1d4761399da69714e378] was terminated due to BROWSER_TIMEOUT
+2019-12-19 09:44:13:12S +0000 [OFF ] com.cognizant.cognizantits.engine.drivers.SeleniumDriver closeBrowser:Couldn't Kill the Driver
+org.openqa.selenium.WebDriverException: Session [7d22dbd73666bf336d4198281d21245f] was terminated due to BROWSER_TIMEOUT
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'fe5954dc2992', ip: '172.25.0.4', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-20-generic', java.version: '11.0.2'
+System info: host: '562ec1da68c4', ip: '192.168.240.4', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-20-generic', java.version: '11.0.2'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.70, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: /tmp/.com.google.Chrome.9cBknF}, goog:chromeOptions: {debuggerAddress: localhost:43135}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 422c8676dafc1d4761399da6971...}
-Session ID: 422c8676dafc1d4761399da69714e378
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.70, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: /tmp/.com.google.Chrome.lgB0FS}, goog:chromeOptions: {debuggerAddress: localhost:44575}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 7d22dbd73666bf336d4198281d2...}
+Session ID: 7d22dbd73666bf336d4198281d21245f
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -241,15 +196,15 @@ Testcase Name        : BasicFeatures:DemoTestCase
 Executed Steps       : 6
 Passed Steps         : 3
 Failed Steps         : 3
-Time Taken           : 00:00:08
+Time Taken           : 00:00:14
 -----------------------------------------------------
 
-Run Finished on Thu Dec 19 09:43:34 UTC 2019
+Run Finished on Thu Dec 19 09:44:13 UTC 2019
 -----------------------------------------------------
-ExecutionDate        : 19-Dec-2019 09-43-25
+ExecutionDate        : 19-Dec-2019 09-43-59
 Executed TestCases   : 1
 Passed TestCases     : 0
 Failed TestCases     : 1
-Time Taken           : 00:00:08
-ReportPath           : file:///Projects/DemoProject/Results/TestExecution/cits/BasicWebFlow_Environment1/19-Dec-2019 09-43-25/summary.html
+Time Taken           : 00:00:14
+ReportPath           : file:///Projects/DemoProject/Results/TestExecution/cits/BasicWebFlow_Environment1/19-Dec-2019 09-43-59/summary.html
 -----------------------------------------------------
